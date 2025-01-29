@@ -5,29 +5,41 @@
     max-width: 372px;
     padding: 10px;
     height: 100%;
-    padding-top: 90px;
-    background: #1C1F25;
+    padding-right: 22px;
+    padding-top: 70px;
+    background: #10141D;
 
     &__inner {
-        background: #282C33;
-        padding: 5px;
+        border-top: 1px solid #10141D;
+        background: rgba(22, 30, 43, 0.90);
+        padding: 16px;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     &__line1 {
-        background: #1C1F25;
         display: flex;
-        height: 58px;
+        height: 66px;
         padding: 8.5px 16px;
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
         margin-bottom: 5px;
+        border-radius: 8px;
+        background: #253247;
+        padding: 14px 16px;
 
         &__left {
             display: flex;
             align-items: center;
+            color: #FFF;
+            font-family: Ubuntu;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
             color: #FFF;
             font-family: Ubuntu;
             font-size: 16px;
@@ -46,6 +58,13 @@
                 text-transform: capitalize;
                 margin-bottom: 0;
                 margin-left: 5px;
+                color: rgba(255, 255, 255, 0.50);
+                font-family: Ubuntu;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
             }
 
             img {
@@ -68,10 +87,24 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
             }
 
 
             &--bottom {
+                color: #868993;
+                font-family: Ubuntu;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
                 color: #868993;
                 font-family: Ubuntu;
                 font-size: 14px;
@@ -84,25 +117,25 @@
     }
 
     &__line2 {
-        background: #1C1F25;
         display: flex;
-        height: 58px;
+        height: 66px;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 5px;
+        gap: 4px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #253247;
 
         &__item {
             width: 100%;
-            height: 45px;
+            height: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
             flex-direction: column;
+            border-radius: 8px;
+            background: #253247;
+            padding: 12px;
 
-            &:nth-child(2) {
-                border-right: 1px solid rgba(255, 255, 255, 0.50);
-                border-left: 1px solid rgba(255, 255, 255, 0.50);
-            }
 
             &--top {
                 color: rgba(255, 255, 255, 0.50);
@@ -114,6 +147,13 @@
                 text-transform: capitalize;
                 line-height: 1;
                 margin-bottom: 2px;
+                color: rgba(255, 255, 255, 0.50);
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
             }
 
             &--bottom {
@@ -125,6 +165,13 @@
                 line-height: normal;
                 text-transform: capitalize;
                 line-height: 1;
+                color: #FFF;
+                font-family: Roboto;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
             }
         }
 
@@ -136,11 +183,17 @@
         width: 100%;
         height: 58px;
         margin-bottom: 5px;
-        justify-content: center;
         align-items: center;
         color: #FFF;
         font-family: Ubuntu;
         font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 22px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -154,13 +207,12 @@
         &__header {
             display: flex;
             gap: 5px;
-            height: 52px;
+            height: 28px;
 
             &--item {
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 color: #1E372D;
                 font-family: Ubuntu;
                 font-size: 16px;
@@ -168,13 +220,28 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
+                font-family: Ubuntu;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: capitalize;
+
+                &--divider {
+                    height: 100%;
+                    width: 1px;
+                    background: #253247;
+                    margin: 0 4px;
+                }
+
+
 
                 &.ticket {
-                    background: #1491FF;
+                    color: #9BD0FF;
                 }
 
                 &.price {
-                    background: #25C362;
+                    color: #4DFF94;
                 }
             }
         }
@@ -183,17 +250,19 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-height: 575px;
+            max-height: 470px;
             overflow: scroll;
-            -ms-overflow-style: none; 
+            -ms-overflow-style: none;
             margin-top: 5px;
             cursor: default;
-            
-            &::-webkit-scrollbar { width: 0; }
+
+            &::-webkit-scrollbar {
+                width: 0;
+            }
 
             &__line {
                 display: flex;
-                min-height: 52px;
+                min-height: 42px;
                 width: 100%;
                 gap: 5px;
                 margin-top: 5px;
@@ -212,21 +281,36 @@
                     font-weight: 500;
                     line-height: normal;
                     text-transform: capitalize;
-                    width: 100%;
+                    width: 50%;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
                     text-overflow: ellipsis;
+                    border-radius: 4px;
+                    font-family: Ubuntu;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    padding: 8px 12px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 50%;
 
                     &.ticket {
-                        background-color: #175195;
+                        background: rgba(20, 145, 255, 0.25);
+                        color: #9BD0FF;
                     }
 
                     &.price {
-                        background: #248449;
+                        background: rgba(37, 195, 98, 0.25);
+                        color: #4DFF94;
 
                         &.red {
-                            background: #611D31;
+                            background: rgba(255, 73, 73, 0.25);
+                            color: #FF6161;
+
                         }
                     }
                 }
@@ -236,24 +320,3 @@
 }
 
 
-@media (max-width: 1600px) {
-    .left {
-        max-width: 300px;
-    }
-
-    .left__line1__right--top {
-        font-size: 15px;
-    }
-
-    .left__line2__item--bottom {
-        font-size: 15px;
-    }
-
-    .left__table__body__line--item {
-        font-size: 14px;
-    }
-
-    .left__table__body {
-        max-height: 375px;
-    }
-}

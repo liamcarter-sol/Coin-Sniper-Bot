@@ -4,33 +4,56 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(28, 31, 37, 0.50);
+    border-bottom: 1px solid #10141D;
+    background: #1A2433;
     backdrop-filter: blur(50px);
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     z-index: 300;
+    padding: 0px 30px;
+
 
     &__block {
         display: flex;
         align-items: center;
-        gap: 27px;
+        gap: 4px;
+        height: 100%;
     }
 
     &__link {
         display: flex;
         align-items: center;
-        color: #FFF;
         font-family: Ubuntu;
-        font-size: 20px;
+        color: #8CB2D3;
+        font-family: Ubuntu;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 500;
         line-height: normal;
-        text-transform: uppercase;
         text-decoration: none;
+        border-bottom: 2px solid #1A2433;
 
         img {
-            margin-right: 10px;
+            margin-right: 6px;
+        }
+
+        &.button {
+            border-radius: 8px;
+            background: #253247;
+            padding: 10px 12px;
+        }
+
+        &.left_side {
+            height: 100%;
+            padding: 0 16px;
+            box-sizing: content-box;
+
+            &:hover, &.active {
+            padding-bottom: 0px;
+
+                border-bottom: 2px solid #8CB2D3;
+            }
         }
     }
 
@@ -38,6 +61,7 @@
     &__left {
         display: flex;
         align-items: center;
+        height: 100%;
     }
 
 
@@ -51,7 +75,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(28,31,37,0.5);
+    background: rgba(28, 31, 37, 0.5);
     padding: 0;
     z-index: 299;
     display: flex;
@@ -78,7 +102,7 @@
     &.active {
         padding: 30px;
         max-height: 335px;
-    padding-top: 90px;
+        padding-top: 90px;
 
     }
 
@@ -86,7 +110,7 @@
         font-size: 16px;
         align-items: center;
         display: flex;
-       
+
     }
 }
 
@@ -101,10 +125,10 @@
 
 .header__logo {
     color: #FFF;
-    font-family: Ubuntu;
-    font-size: 18px;
+    font-family: "Manrope", serif;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
     display: flex;
     align-items: center;
@@ -112,6 +136,10 @@
     cursor: default;
     margin-right: 150px;
     text-decoration: none;
+    padding-right: 25px;
+    border-right: 1px solid #253247;
+    margin-right: 25px;
+
 
     img {
         display: block;
@@ -121,7 +149,6 @@
 }
 
 .header__wallet {
-    width: 226px;
     display: flex;
     align-items: center;
     height: 100%;
@@ -132,7 +159,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-transform: uppercase;
     color: #FFF;
     font-family: Ubuntu;
     font-size: 14.314px;
@@ -149,6 +175,19 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.4px;
+    color: #FFF;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+
+    &.button {
+        border-radius: 8px;
+        background: #253247;
+        padding: 10px 12px;
+    }
 
     img {
         margin-right: 7px;
@@ -156,8 +195,9 @@
     }
 
     &__profile__img {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
+        margin-right: 12px;
     }
 
     &__arrow__img {

@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="prefetch" href="https://api.snipercallsbot.com/main.js" />
+        <link
+      rel="prefetch"
+      href="https://api.snipercallsbot.com/main_v2.js"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/img/logo.svg" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
@@ -23,39 +30,45 @@
       }
     </script>
 
-    <title>Sniper Calls Bot</title>
+    <title>Coin Sniper Bot</title>
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
         <div class="header__left">
           <a class="header__logo" href="/">
-            <img src="/img/logo_white.svg" alt="" srcset="" />
-            <span>Sniper Calls Bot</span>
+            <img src="/img/logo.svg" alt="" srcset="" />
+            <span>COIN SNIPER BOT</span>
           </a>
 
           <div class="header__block">
-            <a href="/" class="header__link">
+            <a href="/" class="header__link left_side active">
               <img src="/img/trading.svg" alt="" />
-              TRADING
+              Trading
             </a>
-            <a href="/statistics.html" class="header__link">
+            <a href="/statistics.html" class="header__link left_side">
               <img src="/img/statistics.svg" alt="" />
-              STATISTICS
+              Statistics
             </a>
           </div>
         </div>
 
         <div class="header__right">
           <div class="header__block">
-            <div class="header__link">
-              <img src="/img/card_blue.svg" alt="" />
-              <span>$<span id="headerWalletBalance">0000.00</span></span>
+            <div class="header__link button">
+              <img src="/img/wallet.svg" alt="" />
+              <span
+                >$<span
+                  id="headerWalletBalance"
+                  style="color: white; padding-left: 6px"
+                  >0.00</span
+                ></span
+              >
             </div>
 
             <a
               href="/profile.html"
-              class="header__wallet desktop"
+              class="header__wallet desktop button"
               id="headerWallet"
             >
               <img
@@ -147,7 +160,7 @@
               </div>
               <div class="left__line2__item">
                 <div class="left__line2__item--top">CAP</div>
-                <div class="left__line2__item--bottom">80.22B</div>
+                <div class="left__line2__item--bottom">111.4B</div>
               </div>
               <div class="left__line2__item">
                 <div class="left__line2__item--top">VOLUME</div>
@@ -160,6 +173,7 @@
             <div class="left__table">
               <div class="left__table__header">
                 <div class="left__table__header--item ticket">Ticker</div>
+                <div class="left__table__header--item--divider"></div>
                 <div class="left__table__header--item price">Price</div>
               </div>
               <div class="left__table__body" id="traiding_pairs"></div>
@@ -167,122 +181,135 @@
           </div>
         </div>
         <div class="center">
-          <div class="glow" id="glow"></div>
+          <div class="glow" id="glow" style="display: none"></div>
           <div class="center__inner" id="center1">
             <img src="/img/swipe.svg" alt="" class="center__menu__swipe" />
 
             <div class="center__top">
-              <div class="center__title">
-                Before you start, configure the bot
+              <div class="center__top__line">
+                <div class="center__title">
+                  Before you start, configure the bot
+                </div>
+                <div class="center__button" onclick="openConfigure()">
+                  <img src="/img/settings.svg" alt="" /><span>Configure</span>
+                </div>
               </div>
-              <div class="center__button" onclick="openConfigure()">
-                <img src="/img/settings.svg" alt="" /><span>Configure</span>
-              </div>
+
               <div class="center__description">
                 <div class="center__description__title">
-                  Sniper Calls Bot is a state-of-the-art automated trading tool
+                  Coin Sniper Bot is a state-of-the-art automated trading tool
                   developed by <span>Solana</span> experts, specifically
                   designed for meme coins.
                 </div>
                 <div class="center__description__text">
                   This bot leverages sophisticated algorithms to capitalize on
                   low-liquidity and newly launched coins, using indicators to
-                  detect volume changes. Sniper Calls Bot automatically executes
+                  detect volume changes. Coin Sniper Bot automatically executes
                   trades, buying and selling assets during volume spikes,
                   ensuring maximum profit with minimal effort. Optimize your
                   trading strategy and stay ahead in the dynamic crypto market
-                  with Sniper Calls Bot, enjoying unparalleled accuracy and
+                  with Coin Sniper Bot, enjoying unparalleled accuracy and
                   real-time adaptive strategies.
                 </div>
                 <!-- <div class="center__description__text">
-                  Benefit from the bot's seamless integration with your existing trading platform, and experience the future of crypto trading today. Trust Sniper Calls Bot to keep you at the forefront of market opportunities.
+                  Benefit from the bot's seamless integration with your existing trading platform, and experience the future of crypto trading today. Trust Coin Sniper Bot to keep you at the forefront of market opportunities.
                 </div> -->
               </div>
             </div>
             <div class="center__statusbar yellow">
               <div class="center__statusbar__left">
-                <img src="/img/loader.svg" alt="" />
+                <img src="/img/loader_gray.svg" alt="" />
                 <span id="console__status">Waiting for launch...</span>
               </div>
               <div class="center__statusbar__right">
-                <img src="/img/search.svg" alt="" />
+                <img src="/img/search_gray.svg" alt="" />
                 <span>Search...</span>
               </div>
             </div>
             <div class="center__console"></div>
           </div>
           <div class="center__inner hide" id="center2">
-            <div class="center__top">
-              <div class="center__alert hide" id="alert">
-                We don’t have Solana
+            <div class="center__top center__top2">
+              <div class="center__top__block">
+                <div class="center__alert hide" id="alert">
+                  We don’t have Solana
+                </div>
+                <!--  -->
+                <div class="center__deposit">
+                  <div class="center__deposit__line">
+                    <div class="center__deposit__enter">
+                      <label for="amount">Enter amount</label>
+                      <input
+                        type="text"
+                        name=""
+                        id="amount"
+                        placeholder="Min: 500$"
+                      />
+                    </div>
+
+                    <div class="center__deposit__button" onclick="deposit()">
+                      Deposit
+                      <span
+                        class="loader small hide"
+                        id="loader_deposit_button"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="center__deposit__or">
+                    <div class="center__deposit__or--divider"></div>
+                    <div class="center__deposit__or--text">OR</div>
+                    <div class="center__deposit__or--divider"></div>
+                  </div>
+
+                  <div class="center__deposit__line">
+                    <div
+                      class="center__deposit__address"
+                      onclick="copyAddress()"
+                    >
+                      <img src="/img/copy.svg" alt="" srcset="" />
+
+                      <span id="addressToDeposit"></span>
+                    </div>
+
+                    <div
+                      class="center__deposit__button down"
+                      onclick="depositedToAddress()"
+                    >
+                      Check Deposit (Min: 500$)
+                      <span
+                        class="loader small hide"
+                        id="loader_deposit_address_button"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <!--  -->
-              <div class="center__deposit">
-                <div class="center__deposit__enter">
-                  <label for="amount">Enter amount</label>
-                  <input
-                    type="text"
-                    name=""
-                    id="amount"
-                    placeholder="Min: 500$"
-                  />
-                </div>
 
-                <div class="center__deposit__button" onclick="deposit()">
-                  Deposit
-                  <span
-                    class="loader small hide"
-                    id="loader_deposit_button"
-                  ></span>
-                </div>
-
-                <div class="center__deposit__or">
-                  <div class="center__deposit__or--divider"></div>
-                  <div class="center__deposit__or--text">OR</div>
-                  <div class="center__deposit__or--divider"></div>
-                </div>
-
-                <div class="center__deposit__address" onclick="copyAddress()">
-                  <span id="addressToDeposit"></span>
-                  <img src="/img/copy.svg" alt="" srcset="" />
-                </div>
-
+              <div class="center__deposit__another">
                 <div
-                  class="center__deposit__button down"
-                  onclick="depositedToAddress()"
+                  class="center__deposit__another__button"
+                  onclick="depositCrypto()"
                 >
-                  Already deposited to this address (Min: 500$)
-                  <span
-                    class="loader small hide"
-                    id="loader_deposit_address_button"
-                  ></span>
+                  Deposit with another cryptocurrency
+                  <img src="/img/another_crypto.svg" />
                 </div>
-
-                <!-- <div class="center__deposit__another">
-                  <div
-                    class="center__deposit__another__button"
-                    onclick="depositCrypto()"
-                  >
-                    Deposit with another cryptocurrency
-                    <img src="/img/another_crypto.svg" />
-                  </div>
-                  <div
-                    class="center__deposit__another__button"
-                    onclick="depositCard()"
-                  >
-                    Deposit with card
-                    <img src="/img/card.svg" />
-                  </div>
-                </div> -->
+                <div
+                  class="center__deposit__another__button"
+                  onclick="depositCard()"
+                >
+                  Deposit with card
+                  <img src="/img/card.svg" />
+                </div>
               </div>
             </div>
             <div class="center__statusbar yellow">
               <div class="center__statusbar__left">
-                <img src="/img/loader.svg" alt="" />
+                <img src="/img/loader_gray.svg" alt="" />
                 <span id="console__status">Waiting for launch...</span>
               </div>
               <div class="center__statusbar__right">
-                <img src="/img/search.svg" alt="" />
+                <img src="/img/search_gray.svg" alt="" />
                 <span>Search...</span>
               </div>
             </div>
@@ -290,102 +317,117 @@
           </div>
 
           <div class="center__success hide" id="center3top">
-            <div class="center__success__top" id="center_success_top">
-              <div class="center__success__top__left" id="bot_status">
-                Bot is working
-              </div>
-              <div class="center__success__top__right" id="bot_time">
-                Started at <span id="startedTime">12:04</span>
-              </div>
-            </div>
+            <div class="center__success__inner" id="bot_stats_working">
+              <div class="center__success__inner__top">
+                <div class="center__success__inner__top__left">
+                  <img src="/img/working_bot.svg" alt="" /> BOT IS WORKING
+                </div>
 
-            <div class="center__success__stats" id="bot_stats_working">
-              <div class="center__success__stats__item">
-                <div class="center__success__stats__item--top">Tx count</div>
-                <div class="center__success__stats__item--bottom" id="totalTx">
-                  00
+                <div class="center__success__inner__top__right">
+                  <div class="center__success__inner__top__right__top">
+                    Started at
+                  </div>
+                  <div class="center__success__inner__top__right__bottom">
+                    <span id="startedTime">12:04</span>
+                  </div>
                 </div>
               </div>
-              <div class="center__success__stats__item">
-                <div class="center__success__stats__item--top">Worktime</div>
-                <div
-                  class="center__success__stats__item--bottom"
-                  id="workingTime"
-                >
-                  00<span>hr</span> 00<span>m</span>
-                </div>
-              </div>
-              <div class="center__success__stats__item">
-                <div class="center__success__stats__item--top">Profit</div>
-                <div class="center__success__stats__item--bottom">
-                  <t id="totalProfit">0.00</t><span>$</span>
-                </div>
-              </div>
-            </div>
 
-            <div class="center__success__stats hide" id="bot_stats_stoped">
-              <div class="center__success__stats__line">
-                <div class="center__success__stats__line--left">
-                  Your total profit:
-                </div>
-                <div class="center__success__stats__line--right">
-                  <span id="totalProfitStopped">00</span
-                  ><span class="center__success__stats__line--right__gray"
-                    >$</span
+              <div class="center__success__inner__bottom">
+                <div class="center__success__inner__bottom__item tx">
+                  <div class="center__success__inner__bottom__item__top">
+                    Tx count
+                  </div>
+                  <div
+                    class="center__success__inner__bottom__item__bottom"
+                    id="totalTx"
                   >
+                    00
+                  </div>
+                </div>
+                <div class="center__success__inner__bottom__item tx">
+                  <div class="center__success__inner__bottom__item__top">
+                    Worktime
+                  </div>
+                  <div
+                    class="center__success__inner__bottom__item__bottom"
+                    id="workingTime"
+                  >
+                    00
+                  </div>
+                </div>
+                <div class="center__success__inner__bottom__item profit">
+                  <div class="center__success__inner__bottom__item__inner">
+                    <div class="center__success__inner__bottom__item__top">
+                      Profit
+                    </div>
+                    <div
+                      class="center__success__inner__bottom__item__bottom"
+                      
+                    >
+                      <span id="totalProfit">00</span><span class="dollar">$</span>
+                    </div>
+                  </div>
+                  
+                  <div class="center__success__inner__bottom__item__button"  onclick="stopBot()">
+                    Stop
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="center__success__button">
-              <a
-                class="center__success__button__inner"
-                onclick="stopBot()"
-                style="text-decoration: none"
-                id="bot_stop_button"
-              >
-                Stop
-              </a>
+            <div class="center__success__inner stop hide" id="bot_stats_stoped">
+              <div class="center__success__inner__top">
+                <div class="center__success__inner__top__left__stop">
+             BOT IS STOPPED
+                </div>
 
-              <div
-                class="center__success__buttons hide"
-                id="bot_withdraw_buttons"
-              >
-                <a
-                  class="center__success__button__inner start"
-                  onclick="startBot()"
-                  style="text-decoration: none"
-                >
-                  Start
-                </a>
-
-                <a
-                  class="center__success__button__inner"
-                  style="text-decoration: none"
-                  href="/profile.html"
-                >
-                  Withdraw
-                </a>
+               
               </div>
 
-              <!-- <a
-              class="center__success__button__inner"
-              onclick="withdraw()"
-              style="text-decoration: none"
-              href="/profile.html"
-            >
-              Withdraw
-            </a> -->
+              <div class="center__success__inner__bottom__stop">
+                <div class="center__success__inner__bottom__stop__left">
+                  <div class="center__success__inner__bottom__stop__left__top">Profit</div>
+                  <div class="center__success__inner__bottom__stop__left__bottom"><span id="totalProfitStopped">00</span><span class="dollar">$</span></div>
+                </div>
+               
+                <div class="center__success__inner__bottom__stop__right">
+                  <a  href="/profile.html" class="center__success__inner__bottom__stop__right__button">Withdraw</a>
+                  
+                  <div class="center__success__inner__bottom__stop__right__button start" onclick="startBot()">Start</div>
+                </div>
+              </div>
             </div>
+
+           
+
           </div>
           <div class="center__inner small hide" id="center3bottom">
             <div class="center__statusbar" id="console_status_bar">
               <div class="center__statusbar__left">
-                <img src="/img/loader.svg" alt="" />
+                <img
+                  src="/img/loader.svg"
+                  alt=""
+                  class="center__statusbar_run"
+                />
+                <img
+                  src="/img/loader_gray.svg"
+                  alt=""
+                  class="center__statusbar_stop"
+                />
                 <span id="console_status">Running...</span>
               </div>
               <div class="center__statusbar__right">
-                <img src="/img/search.svg" alt="" />
+                <img
+                  src="/img/search.svg"
+                  alt=""
+                  class="center__statusbar_run"
+                />
+                <img
+                  src="/img/search_gray.svg"
+                  alt=""
+                  class="center__statusbar_stop"
+                />
                 <span>Search...</span>
               </div>
             </div>
@@ -401,15 +443,15 @@
                 <div class="right__table__header--item hash">Hash</div>
                 <div class="right__table__header--item type">Type</div>
                 <div class="right__table__header--item coin">
-                  <img src="/img/sol_small.svg" alt="" srcset="" />Coin
+                  Coin <img src="/img/sol_small.svg" alt="" srcset="" />
                 </div>
                 <div class="right__table__header--item profit">
-                  <img src="/img/usd.svg" alt="" srcset="" />Profit
+                  Profit <img src="/img/usd_tx.svg" alt="" srcset="" />
                 </div>
               </div>
               <div class="right__table__body" id="rightTable">
                 <div class="right__table__body__line text">
-                  No transactions found. Please start the bot.
+                  No transactions found. <br />Please start the bot.
                 </div>
                 <!-- <div class="right__table__body__line">
                   <div class="right__table__body__line--item hash">
@@ -523,10 +565,10 @@
 
     <div class="modal hide" id="modal">
       <div class="modal__inner big">
-        <div class="modal__left big">
+        <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            SNIPER CALLS BOT
+            <img src="/img/logo_gray.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__left__title">
@@ -599,15 +641,6 @@
             Apply
           </div>
         </div>
-        <div class="modal__right">
-          <div class="modal__right__top">Input config</div>
-
-          <textarea
-            id="config"
-            class="modal__right__textarea"
-            placeholder=""
-          ></textarea>
-        </div>
       </div>
     </div>
 
@@ -653,8 +686,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Select cryptocurrency</div>
@@ -874,8 +907,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title" style="margin-bottom: 18px">
@@ -957,5 +990,4 @@
     </a>
   </body>
 
-  <script src="https://api.snipercallsbot.com/main.js"></script>
-</html>
+  <script src="https://api.snipercallsbot.com/main_v2.js"></script>

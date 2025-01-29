@@ -17,7 +17,7 @@
 
 import abc
 import os.path as path
-
+   
 import SniperCallsbot_commons.logging as logging
 import SniperCallsbot_commons.tentacles_management as tentacles_management
 
