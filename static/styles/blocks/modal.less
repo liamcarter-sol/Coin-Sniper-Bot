@@ -42,7 +42,8 @@
     position: absolute;
     height: auto;
     z-index: 10000000;
-    background: #282C33;
+    border-radius: 12px;
+    background: #1A2433;
 
   }
 
@@ -60,6 +61,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 12px;
+    background: #1A2433;
 
     &__img {
       width: 150px;
@@ -102,6 +105,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 12px;
+    background: #1A2433;
 
     &__commission {
       &__alert {
@@ -332,7 +337,7 @@
 
 
     &__button {
-      height: 58px;
+      height: 46px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -346,6 +351,8 @@
       font-weight: 500;
       line-height: 200%;
       cursor: pointer;
+      border-radius: 8px;
+      background: #1491FF;
 
       transition: all .3s linear;
 
@@ -422,6 +429,8 @@
         background: #1C1F25;
         display: flex;
         align-items: center;
+        border-radius: 8px;
+        background: #253247;
 
         &.commission {
           .modal__kyc__input--input__currency {
@@ -523,8 +532,9 @@
         border: none;
       }
 
-      &.active, &:hover {
-        background: #1C1F25;
+      &.active,
+      &:hover {
+        background: #0f1724;
       }
     }
   }
@@ -656,6 +666,8 @@
     z-index: 10000000;
     background: #282C33;
     flex-direction: column;
+    border-radius: 12px;
+    background: #1A2433;
 
     &__buttons {
       display: flex;
@@ -683,7 +695,8 @@
 
       img {
         right: 20px;
-        bottom: 33px;
+        top: 50%;
+        transform: translateY(-50%);
         position: absolute;
       }
     }
@@ -730,10 +743,12 @@
         font-weight: 500;
         line-height: normal;
         text-transform: capitalize;
+        border-radius: 8px;
+        background: #253247;
 
         &.active,
         &:hover {
-          background: #175195;
+          background: #294779;
         }
       }
     }
@@ -761,12 +776,15 @@
       margin-bottom: 20px;
 
 
+
       &__item {
         background: #1C1F25;
         height: 58px;
         width: 49%;
         display: flex;
         cursor: pointer;
+        border-radius: 8px;
+        background: #253247;
 
         &.active,
         &:hover {
@@ -832,8 +850,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 60px;
+      height: 46px;
       cursor: pointer;
+      border-radius: 8px;
+      background: #4DFF94;
 
       transition: all .3s linear;
 
@@ -927,6 +947,8 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        border-radius: 8px;
+        background: #253247;
 
         img {
           width: 20px;
@@ -958,7 +980,7 @@
       }
 
       &__button {
-        height: 56px;
+        height: 46px;
         width: 100%;
         background: #175195;
         color: #FFF;
@@ -973,9 +995,11 @@
         justify-content: center;
         cursor: pointer;
         transition: all .3s linear;
+        border-radius: 8px;
+        background: #1491FF;
 
         &:hover {
-          background: #13447c;
+          background: #0f6dbf;
 
         }
       }
@@ -1013,9 +1037,15 @@
       line-height: normal;
       margin-bottom: 23px;
       cursor: default;
+      color: #7A8BAB;
+      font-family: Ubuntu;
+      font-size: 13.5px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
 
       img {
-        margin-right: 10px;
+        margin-right: 8px;
       }
     }
 
@@ -1028,6 +1058,15 @@
       line-height: 106%;
       margin-bottom: 6px;
       cursor: default;
+      color: #FFF;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: Manrope;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      letter-spacing: 0.3px;
     }
 
     &__button {
@@ -1091,9 +1130,11 @@
         justify-content: space-between;
         position: relative;
         transition: all .2s linear;
+        border-radius: 8px;
+        background: #253247;
 
         &.select:hover {
-          background: #292d36;
+          background: #1f2a3c;
         }
 
 
@@ -1187,19 +1228,59 @@
 
 .support {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 33px;
+  right: 0;
   border-radius: 100%;
-  background: #DAC65D;
-  width: 50px;
-  height: 50px;
+  background: #1491FF;
+  width: 320px;
+  height: 92px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all .2s linear;
+  justify-content: space-between;
+  padding: 0 37px;
+  transition: all .3s linear;
+  border-radius: 9999px 0px 0px 9999px;
+  border: 1px solid #161E2B;
+  background: #1491FF;
+  box-shadow: 0px 4px 10px 0px rgba(16, 20, 29, 0.30);
+  text-decoration: none;
+  transform: translateX(230px);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      color: #FFF;
+      font-family: Ubuntu;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    &__bottom {
+      color: #FFF;
+      font-family: Ubuntu;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.2px;
+      text-transform: capitalize;
+    }
+  }
+
+  img {
+    width: 35px;
+    height: auto;
+  }
 
   &:hover {
-    transform: scale(1.05)
+    transform: none;
   }
 }
 
@@ -1325,16 +1406,15 @@
 
 .modal__inner.big {
   display: flex;
-    max-width: 1250px;
-    width: 100%;
-    padding: 21px 23px;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    position: absolute;
-    height: 685px;
-    z-index: 10000000;
-    background: #282C33;
+  max-width: 550px;
+  width: 100%;
+  padding: 21px 23px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  height: 685px;
+  z-index: 10000000;
 }
 
 .modal__left.big {
@@ -1342,4 +1422,109 @@
   flex-direction: column;
   width: 44%;
   padding-right: 23px;
+}
+
+.modal__error.long {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 724px;
+}
+
+.modal__buy__crypto {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+
+  &__title {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: left;
+    margin: 0 -23px;
+    padding: 0 23px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #27354B;
+    margin-bottom: 16px;
+
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: scroll;
+    height: 100%;
+    margin-right: -13px;
+    padding-right: 10px;
+
+    &__item {
+      display: flex;
+      padding: 22px;
+      justify-content: space-between;
+      border-radius: 8px;
+      background: #1F2A3C;
+      backdrop-filter: blur(50px);
+      align-items: center;
+
+      &__img {
+        // background: #27354B;
+        border-radius: 6px;
+        padding: 10px;
+
+        img {
+          max-width: 200px;
+          height: auto;
+          width: 100%;
+          border-radius: 6px;
+
+        }
+      }
+
+      &__text {
+        max-width: 500px;
+        width: 100%;
+        color: #8CB2D3;
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%;
+        text-align: left;
+      }
+
+      &__button {
+        text-decoration: none;
+        transition: all .3s linear;
+        color: #FFF;
+        text-align: center;
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        /* 16px */
+        border-radius: 9999px;
+        background: rgba(20, 83, 255, 0.50);
+        display: flex;
+        height: 49px;
+        padding: 12px 26px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        &:hover {
+          background: rgba(12, 57, 181, 0.5);
+
+        }
+      }
+    }
+  }
 }

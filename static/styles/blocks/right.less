@@ -2,17 +2,20 @@
 
 .right {
     width: 100%;
-    max-width: 570px;
+    max-width: 480px;
     padding: 10px;
+    padding-left: 22px;
     height: 100%;
-    padding-top: 90px;
-    background: #1C1F25;
+    padding-top: 70px;
+    background: #10141D;
 
     &__inner {
-        background: #282C33;
-        padding: 5px;
+        border-top: 1px solid #10141D;
+        background: rgba(22, 30, 43, 0.90);
+        padding: 12px 16px;
         width: 100%;
         height: 100%;
+        overflow: hidden;
     }
 
     &__line {
@@ -20,11 +23,10 @@
         width: 100%;
         height: 58px;
         margin-bottom: 5px;
-        justify-content: center;
         align-items: center;
         color: #FFF;
-        font-family: Ubuntu;
-        font-size: 20px;
+        font-family: Roboto;
+        font-size: 22px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -44,7 +46,7 @@
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 color: #1E372D;
                 font-family: Ubuntu;
                 font-size: 16px;
@@ -52,8 +54,18 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
-                background: #1C1F25;
+                // background: #1C1F25;
                 color: white;
+                color: #A9ABAD;
+                font-family: Ubuntu;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-transform: capitalize;
+                padding: 0 8px;
+                border-right: 2px solid #253247;
+                height: 30px;
 
                 &.hash {
                     width: 33%;
@@ -64,23 +76,24 @@
                 }
 
                 &.coin {
-                    background: #1491FF;
-                    color: #1E372D;
+                    // background: #1491FF;
+                    color: #9BD0FF;
+                    justify-content: space-between;
+
                     width: 20%;
 
-                    img {
-                        margin-right: 5px;
-                    }
+                    img {}
                 }
 
                 &.profit {
-                    background: #25C362;
-                    color: #1E372D;
+                    // background: #25C362;
+                    color: #4DFF94;
+                    justify-content: space-between;
+                    border-right: 0;
+
                     width: 27.5%;
 
-                    img {
-                        margin-right: 2px;
-                    }
+                    img {}
                 }
             }
         }
@@ -120,6 +133,11 @@
                     font-weight: 500;
                     line-height: normal;
                     text-transform: capitalize;
+                    color: #A9ABAD;
+                    font-family: Ubuntu;
+                    font-style: normal;
+                    line-height: normal;
+                    text-align: center;
                 }
 
                 &:nth-child(1) {
@@ -129,40 +147,56 @@
 
                 &--item {
                     color: #FFF;
-                    text-align: center;
                     font-family: Ubuntu;
                     font-size: 16px;
                     font-style: normal;
-                    font-weight: 500;
                     line-height: normal;
                     text-transform: capitalize;
                     width: 100%;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
                     background: #1C1F25;
+                    border-radius: 4px;
+                    background: #253247;
+                    padding: 8px;
+
 
                     &.hash {
                         width: 33%;
-                        color: #A9ABAD; 
+                        color: #A9ABAD;
                         font-weight: 400;
                     }
-    
+
                     &.type {
                         width: 19.5%;
                         color: #5D7EDA;
 
 
                     }
-    
+
                     &.coin {
-                        background: #175195;
+                        background: rgba(20, 145, 255, 0.25);
+                        color: #9BD0FF;
+                        font-family: Ubuntu;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: capitalize;
                         width: 20%;
                     }
-    
+
                     &.profit {
-                        background: #248449;
+                        background: rgba(37, 195, 98, 0.25);
                         width: 27.5%;
+                        color: #4DFF94;
+                        text-align: center;
+                        font-family: Ubuntu;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-transform: capitalize;
                     }
                 }
             }

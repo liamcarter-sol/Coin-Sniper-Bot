@@ -18,7 +18,6 @@ import copy
 import logging
 import os.path as path
 
-import SniperCallsbot_commons.constants as common_constants
 import SniperCallsbot_commons.enums as enums
 import SniperCallsbot_commons.errors as errors
 import SniperCallsbot_commons.logging as commons_logging
